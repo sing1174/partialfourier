@@ -1,5 +1,6 @@
 # partialfourier
 Partial fourier imaging of MRI images 
 
-Tasks
+Tasks 
+
 Jan 31 2024 - Implementation of POCS in MRI data
