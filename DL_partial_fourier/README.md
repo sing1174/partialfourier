@@ -8,4 +8,5 @@ https://sites.google.com/view/calgary-campinas-dataset/download?authuser=0
 Then make a new directory singlecoil_dataset and divide .npy files into train(17 files), valid(7 files) and test(1 file) folder.
 You can make the data distribution different from this.
  
-In order to view the content inside data and preprocessing operations performed on single coil data, see the single_testing file
+In order to view the content inside data and preprocessing operations performed on single coil data, see the single_testing file . Next run the data_prepare_singlecoil jupyter notebook to generate partial fourier dataset. Here we used 0.55 partial fourier but code can be changed for 5/8 and 6/8. 
+
