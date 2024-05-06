@@ -31,31 +31,41 @@ iter = 30;
 watchProgress = false;
 [imReco_68, kspPF_68] = pocs(kspace68, iter, watchProgress);
 
+
 figure;
 subplot(1,2,1)
-imagesc( abs((kspace68)))
+imagesc(abs((kspace68)))
 axis image;
 colormap(gray(256))
+clim([0 2e-3]); 
+colorbar; % Add color bar
 title('Original Kspace 6/8')
+
 subplot(1,2,2)
 imagesc(abs(kspPF_68))
 axis image;
 colormap(gray(256))
-title('Recontructed kspace 6/8')
-
+clim([0 2e-3]);
+colorbar; % Add color bar
+title('Reconstructed kspace 6/8')
 
 figure;
 subplot(1,2,1)
 imagesc(image_68)
 axis image;
 colormap(gray(256))
+clim([0 6e-6]); % Set color bar range
+colorbar; % Add color bar
 title("Original image")
 
 subplot(1,2,2)
 imagesc(abs(imReco_68))
 axis image;
 colormap(gray(256))
+clim([0 6e-6]);
+colorbar; % Add color bar
 title("Reconstructed image 6/8")
+
 
 % ssimValue1 = ssim(image_68, abs(imReco_68));
 % fprintf('SSIM: %f\n', ssimValue1);
@@ -70,30 +80,37 @@ kspace58(1:57,:) = 0;
 
 figure;
 subplot(1,2,1)
-imagesc( abs((kspace58)))
+imagesc(abs((kspace58)))
 axis image;
 colormap(gray(256))
+clim([0 2e-3]); 
+colorbar; % Add color bar
 title('Original Kspace 5/8')
+
 subplot(1,2,2)
 imagesc(abs(kspPF_58))
 axis image;
 colormap(gray(256))
-title('Recontructed kspace 5/8')
-
+clim([0 2e-3]);
+colorbar; % Add color bar
+title('Reconstructed kspace 5/8')
 
 figure;
 subplot(1,2,1)
 imagesc(image_68)
 axis image;
 colormap(gray(256))
+clim([0 6e-6]); % Set color bar range
+colorbar; % Add color bar
 title("Original image")
 
 subplot(1,2,2)
 imagesc(abs(imReco_58))
 axis image;
 colormap(gray(256))
+clim([0 6e-6]);
+colorbar; % Add color bar
 title("Reconstructed image 5/8")
-
 
 
 
@@ -106,18 +123,22 @@ kspace48(1:74,:) = 0;
 
 [imReco_48, kspPF_48] = pocs(kspace48, iter, watchProgress);
 
-
 figure;
 subplot(1,2,1)
 imagesc( abs((kspace48)))
 axis image;
 colormap(gray(256))
+clim([0 2e-3]); 
+colorbar; % Add color bar
 title('Original Kspace 4/8')
+
 subplot(1,2,2)
 imagesc(abs(kspPF_48))
 axis image;
 colormap(gray(256))
-title('Recontructed kspace 4/8')
+clim([0 2e-3]);
+colorbar; % Add color bar
+title('Reconstructed kspace 4/8')
 
 
 figure;
@@ -125,14 +146,17 @@ subplot(1,2,1)
 imagesc(image_68)
 axis image;
 colormap(gray(256))
+clim([0 6e-6]); % Set color bar range
+colorbar; % Add color bar
 title("Original image")
 
 subplot(1,2,2)
 imagesc(abs(imReco_48))
 axis image;
 colormap(gray(256))
+clim([0 6e-6]);
+colorbar; % Add color bar
 title("Reconstructed image 4/8")
-
 
 
 %% Final images 
@@ -141,39 +165,48 @@ subplot(2,2,1)
 imagesc(image_68)
 axis image;
 colormap(gray(256))
+clim([0 6e-6]); % Set color bar range
+colorbar; % Add color bar
 title("Original image")
 
 subplot(2,2,2)
 imagesc(abs(imReco_68))
 axis image;
 colormap(gray(256))
+clim([0 6e-6]); % Set color bar range
+colorbar; % Add color bar
 title("Image recon 6/8")
 
 subplot(2,2,3)
 imagesc(abs(imReco_58))
 axis image;
 colormap(gray(256))
+clim([0 6e-6]); % Set color bar range
+colorbar; % Add color bar
 title("Image recon 5/8")
 
 subplot(2,2,4)
 imagesc(abs(imReco_48))
 axis image;
 colormap(gray(256))
+clim([0 6e-6]); % Set color bar range
+colorbar; % Add color bar
 title("Image recon 4/8")
 
 
+
 %%
-image1= imReco_68 - imReco_58;
-
-image2= imReco_68 - imReco_48;
-
-
-figure;
-
-imagesc(abs(image1));
-
-figure;
-imagesc(abs(image2));
+% image1= imReco_68 - imReco_58;
+% 
+% image2= imReco_68 - imReco_48;
+% 
+% 
+% figure;
+% 
+% imagesc(abs(image1));
+% 
+% figure;
+% imagesc(abs(image2));
 
 %% POCS
 
