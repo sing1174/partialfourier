@@ -1,5 +1,6 @@
 # partialfourier
 Partial fourier imaging of MRI images 
+Our goal is to use deep learning for partial fourier reconstruction of 6/8 , 5/8 and 0.55 MRI images. 
 
 Tasks 
 
