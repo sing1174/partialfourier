@@ -14,7 +14,7 @@ Next step is to train our code. Before that we need to make changes to model2_cp
 
 No changes were made in losses.py code but we can explore changes in it for future to make model better.
 
-Before we proceed with training, we need to activate GPU for faster training. We used Nvidia 3050ti inbuild in gaming laptop for our purpose. We ran all code on windows 11 using WSL2 (Windows Subsystem for Linux). Yon can follow their guide given on Nvidia website : https://docs.nvidia.com/cuda/wsl-user-guide/index.html#getting-started-with-cuda-on-wsl-2 . See requirement.txt (created using pipreqs) for the python libraries used. 
+Before we proceed with training, we need to activate GPU for faster training. We used Nvidia 3050ti inbuild in gaming laptop for our purpose. We ran all code on windows 11 using WSL2 (Windows Subsystem for Linux). You can follow their guide given on Nvidia website : https://docs.nvidia.com/cuda/wsl-user-guide/index.html#getting-started-with-cuda-on-wsl-2 . See requirement.txt (created using pipreqs) for the python libraries used. 
 
 ### Training: 
 Run training_singlecoil notebook for training model and viewing result. From original code, we removed the testing part and kept training and validation part only. 
